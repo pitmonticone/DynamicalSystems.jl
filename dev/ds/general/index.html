@@ -21,7 +21,7 @@ end
 end
 
 ds = ContinuousDynamicalSystem(loop, rand(3), [10.0, 28.0, 8/3], loop_jac)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">3-dimensional continuous dynamical system
- state:       [0.961315, 0.0134978, 0.959208]
+ state:       [0.874159, 0.588335, 0.243141]
  rule f:      loop
  in-place?    false
  jacobian:    loop_jac
@@ -112,7 +112,7 @@ end
 sparseJ = sparse(J)
 
 csm(sparseJ, u0, p, 0) # apply Jacobian to initial state</code></pre><p>And finally, we are ready to create our dynamical system:</p><pre><code class="language-julia hljs">ds = DiscreteDynamicalSystem(csm, u0, p, csm, sparseJ)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">10-dimensional discrete dynamical system
- state:       [0.00022944, 0.000309708, …, 0.000216801, 0.00016741]
+ state:       [8.06311e-6, 0.000613903, …, 0.000695526, 0.000138304]
  rule f:      CoupledStandardMaps
  in-place?    true
  jacobian:    CoupledStandardMaps
@@ -195,4 +195,4 @@ tr = trajectory(ds, 10.0; Δt = 0.1, abstol = 1e-9, reltol = 1e-9)</code></pre><
  -8.01079  -7.54848  27.0382
  -7.83288  -7.96251  26.0288
  -8.23289  -8.84589  25.8466
- -8.87894  -9.44531  26.7381</code></pre></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../../contents/">« Contents</a><a class="docs-footer-nextpage" href="../predefined/">Predefined Dynamical Systems »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.27.17 on <span class="colophon-date" title="Monday 16 May 2022 08:42">Monday 16 May 2022</span>. Using Julia version 1.7.2.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+ -8.87894  -9.44531  26.7381</code></pre></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../../contents/">« Contents</a><a class="docs-footer-nextpage" href="../predefined/">Predefined Dynamical Systems »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.27.18 on <span class="colophon-date" title="Monday 30 May 2022 08:55">Monday 30 May 2022</span>. Using Julia version 1.7.3.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
